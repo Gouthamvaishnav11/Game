@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #f9f9f9;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.choice-btn {
+  font-size: 1.2rem;
+  padding: 18px 30px;
+  background: rgba(255,255,255,0.1);
+  border: 2px solid #ffffff33;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.choice-btn:hover {
+  background: #ff7e5f;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff7e5f88;
+}
+
+.choice-btn span {
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+
+.result {
+  background: rgba(255,255,255,0.1);
+  padding: 25px 35px;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  max-width: 450px;
+  width: 90%;
+  animation: fadeIn 0.8s ease;
+}
+
+.result p {
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+#winner {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 20px;
+  color: #ffd700;
+  text-shadow: 0 0 8px #ffd700aa;
+}
+
+/* Popup modal styles (optional) */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.popup.hidden {
+  display: none;
+}
+
+.popup-content {
+  background: #fff;
+  color: #333;
+  padding: 30px 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.popup-content h2 {
+  font-size: 2rem;
+}
+
+.popup-content button {
+  margin-top: 20px;
+  background: #203a43;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#popup-icon {
+  font-size: 3rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
